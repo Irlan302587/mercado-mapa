@@ -1,0 +1,87 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.header-panel {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 { color: #1a73e8; margin-bottom: 10px; }
+p { color: #5f6368; margin-bottom: 20px; }
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+input[type="text"] {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus { border-color: #1a73e8; }
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    color: white;
+}
+
+.btn:active { transform: scale(0.95); }
+
+.btn-gps { background-color: #1a73e8; }
+.btn-mercado { background-color: #34a853; }
+.btn-farmacia { background-color: #ea4335; }
+
+/* O mapa precisa de uma altura definida para aparecer */
+#map {
+    height: 500px;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 15px;
+    border: 2px solid white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+#status {
+    margin-top: 15px;
+    font-weight: 500;
+    color: #202124;
+}
+
+@media (max-width: 600px) {
+    .search-box { flex-direction: column; }
+    input[type="text"] { width: 100%; }
+}

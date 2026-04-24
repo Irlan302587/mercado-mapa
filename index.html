@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MercadoMapa - Farmácias e Mercados</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header-panel">
+        <h1>Mercado Mapa</h1>
+        <p>Encontre serviços essenciais perto de si em tempo real.</p>
+
+        <div class="search-box">
+            <input type="text" id="endereco" placeholder="Digite rua, cidade ou código postal...">
+            <button onclick="buscarLocal('supermarket')" class="btn btn-mercado">🍎 Mercados</button>
+            <button onclick="buscarLocal('pharmacy')" class="btn btn-farmacia">💊 Farmácias</button>
+        </div>
+
+        <button onclick="usarGPS()" class="btn btn-gps">📍 Usar Minha Localização Atual</button>
+        
+        <div id="status">Pronto para pesquisar</div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
